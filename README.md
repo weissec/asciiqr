@@ -16,7 +16,7 @@ chmod +x genqr.sh
 ```
 
 This will output two QR codes in your terminal: one with the default white-on-black scheme, and one with inverted colours.
-The tools will also save an HTML file with the preformatted code (<pre>) ready to be embedded.
+The tools will also save an HTML file with the preformatted code ready to be embedded.
 
 ### Example
 `./genqr.sh https://example.com`
