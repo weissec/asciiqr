@@ -1,30 +1,24 @@
-# GenQR
-Wrapper for the Qrencode tool, generating inverted colors ASCII QR codes.
-Qrencode is great for generating QR codes in various formats. When generating ASCII QRs, however, these are only generated white on black, making it difficult to embed them in emails or other contexts.
-This tools automatically generates a QR codes in inverted black and white as well, allowing you to choose which one works best for your use case.
+# ASCIIQR
+ASCIIQR is a simple wrapper script for the qrencode tool that generates QR codes in ASCII format with both standard and inverted colour schemes. While qrencode natively supports ASCII output, it only produces white-on-black QR codes, which can be difficult to embed in emails or documents with light backgrounds. This script automatically generates both white-on-black and black-on-white versions, allowing you to choose the most suitable format for your use case.
+Features
 
-### How to run:
+### Generates ASCII QR codes using qrencode
+Automatically creates both standard and inverted colour versions.
+Useful for embedding QR codes in plain-text environments such as emails or terminals.
+
+### Requirements
+qrencode must be installed on your system.
+
+### Usage
 ```
 chmod +x genqr.sh
-.\genqr.sh [URL]
+./genqr.sh [URL or text]
 ```
+This will output two QR codes in your terminal: one with the default white-on-black scheme, and one with inverted colours.
+The tools will also save an HTML file with the preformatted code (<pre>) ready to be embedded.
 
-### Credits:  
-Michael Altfield (https://michaelaltfield.net)
+### Example
+```./genqr.sh https://example.com```
 
-
-    █▀▀▀▀▀█  ▄▀  ▄▀    █▄ █▀▀▀▀▀█
-    █ ███ █ ▀▄ ▀▄▄ ▀▄ ▄ ▀ █ ███ █
-    █ ▀▀▀ █  ▀▄▄█▀▄▄█  █▄ █ ▀▀▀ █
-    ▀▀▀▀▀▀▀ █ ▀▄▀ ▀▄▀▄█▄█ ▀▀▀▀▀▀▀
-    ▀█▀▄▀▀▀██▄ ▄█▄ ▄██  █▀█  ▄▀ ▄
-    ▄▀ ▀▀█▀ ▄▄█▀█▄█▀█▄▄ ▄▀▀▄█ ▀█▀
-    ▄  ▀▄ ▀ █ ██  ██▀█  ▄██  █ ▀█
-    ████▀▀▀▀▀▀ ▄ ▀  ▄██ ▄▄█ ▀█ █▀
-     ███▀▀▀▄█▀▄▄█▄ ▀▀▀▀▀▀▄█▀ █▄▀█
-    ▀▄█ █▄▀▄▀▀█▀█▄█ ▀█▄▄▄█▄██▄ █▀
-    ▀ ▀   ▀▀█ ██  █ ▄█ ██▀▀▀█ ▄▄▄
-    █▀▀▀▀▀█ █▀▀▄ ▀ ▄ █▄▀█ ▀ ██ ▀▀
-    █ ███ █ ▀▀ ▄█▄  ▄█  █▀▀██ ▄▄█
-    █ ▀▀▀ █ ███▀█▄█ █▄▄█▄▄ ▀█▀ ▄▀
-    ▀▀▀▀▀▀▀ ▀ ▀▀  ▀▀▀▀ ▀▀▀ ▀▀  ▀▀
+### Credits
+Inspired by Michael Altfield and his work on terminal-based QR code generation.
