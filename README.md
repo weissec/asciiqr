@@ -14,11 +14,12 @@ qrencode must be installed on your system.
 chmod +x genqr.sh
 ./genqr.sh [URL or text]
 ```
+
 This will output two QR codes in your terminal: one with the default white-on-black scheme, and one with inverted colours.
 The tools will also save an HTML file with the preformatted code (<pre>) ready to be embedded.
 
 ### Example
-```./genqr.sh https://example.com```
+`./genqr.sh https://example.com`
 
 ### Credits
 Inspired by Michael Altfield and his work on terminal-based QR code generation.
